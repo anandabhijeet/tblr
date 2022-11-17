@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import TimeLine from './components/timeline/TimeLine';
 
-function App() {
+const App = () => {
+  const cards =[
+    {
+        date: new Date(2018, 11, 24),
+        text:"Lorem Ipsum doloth",
+        positionTop:true
+    },
+    {
+        date: new Date(2019, 10, 21),
+        text:"Lorem Ipsum doloth",
+        positionTop:false
+    },
+    {
+        date: new Date(2019, 6, 12),
+        text:"Lorem Ipsum doloth",
+        positionTop:true
+    },
+    {
+        date: new Date(2021, 1, 24),
+        text:"Lorem Ipsum doloth",
+        positionTop:false
+     }]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <TimeLine cards={cards}></TimeLine>
+  )
 }
 
-export default App;
+export default App
